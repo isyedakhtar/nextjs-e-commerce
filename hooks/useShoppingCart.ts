@@ -53,6 +53,7 @@ export function useShoppingCart() {
             setShippingCost(shippingCost);
             setTotalPrice(totalPrice);
             setGroupOfProducts(groupOfCartProducts);
+            setIsLoading(false);
           });
         })
         .catch((err) => {
