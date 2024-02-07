@@ -4,6 +4,7 @@ import { getProductsByCategory } from "@/components/Carousel/services/getProduct
 import ProductCard from "@/components/productCard/components/ProductCard";
 import Divider from "@/components/Divider/Divider";
 import { categoryNameSelected } from "./_utils";
+import { headers } from "next/headers";
 
 import { Metadata } from "next";
 
@@ -14,8 +15,18 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   //@ts-ignore
   const categoryName = categoryNameSelected[params.category.toLowerCase()];
+  const fullUrl = headers().get("referer") || "";
+
   return {
     title: categoryName,
+    category: categoryName,
+    openGraph: {
+      description: categoryName,
+      type: "article",
+      title: categoryName,
+      url: fullUrl,
+      tags: ["category"],
+    },
   };
 }
 

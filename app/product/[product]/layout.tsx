@@ -2,6 +2,7 @@ import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import { getProductById } from "@/services/getProductById";
 import { Metadata, ResolvingMetadata } from "next";
+import { headers } from "next/headers";
 
 type Props = {
   params: { id: string };
@@ -14,16 +15,17 @@ export async function generateMetadata({
   params: { product: string };
 }): Promise<Metadata> {
   const product = await getProductById(Number(params.product));
+  const fullUrl = headers().get("referer") || "";
 
   return {
     title: product.title,
-    category: "product",
+    category: product.category,
     openGraph: {
       description: product.description,
-      type: "website",
-
+      type: "article",
       title: product.title,
-      url: "/product/{product.id}",
+      url: fullUrl,
+      tags: ["product"],
     },
   };
 }
