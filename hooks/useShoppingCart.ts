@@ -56,7 +56,7 @@ export function useShoppingCart() {
           });
         })
         .catch((err) => {
-          setIsLoading(true);
+          setIsLoading(false);
           if (err.response.data.message === "Unauthorized") {
             dispatch(
               activeWarning({
