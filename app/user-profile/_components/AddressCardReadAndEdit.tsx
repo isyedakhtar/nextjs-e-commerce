@@ -41,7 +41,7 @@ export default function AddressCardReadOnlyAndEdit({
     >
       <div className="grid grid-cols-2 sm:gap-4 gap-1">
         <div>
-          <label className="font-semibold">Nombre:</label>
+          <label className="font-semibold">Name:</label>
           <input
             readOnly={isEditableAddress}
             value={name}
@@ -61,7 +61,7 @@ export default function AddressCardReadOnlyAndEdit({
           />
         </div>
         <div>
-          <label className="font-semibold">Apellido:</label>
+          <label className="font-semibold">Last Name:</label>
           <input
             readOnly={isEditableAddress}
             value={lastName}
@@ -71,7 +71,7 @@ export default function AddressCardReadOnlyAndEdit({
           />
         </div>
         <div>
-          <label className="font-semibold">Ciudad:</label>
+          <label className="font-semibold">City:</label>
           <input
             readOnly={isEditableAddress}
             value={city}
@@ -81,7 +81,7 @@ export default function AddressCardReadOnlyAndEdit({
           />
         </div>
         <div>
-          <label className="font-semibold">Colonia:</label>
+          <label className="font-semibold">Colony:</label>
           <input
             readOnly={isEditableAddress}
             value={colony}
@@ -91,7 +91,7 @@ export default function AddressCardReadOnlyAndEdit({
           />
         </div>
         <div>
-          <label className="font-semibold">Teléfono:</label>
+          <label className="font-semibold">Phone Number:</label>
           <input
             readOnly={isEditableAddress}
             value={phoneNumber}
@@ -102,7 +102,7 @@ export default function AddressCardReadOnlyAndEdit({
         </div>
 
         <div>
-          <label className="font-semibold">Referencia Vecinal:</label>
+          <label className="font-semibold">Neighbour Reference:</label>
           <input
             readOnly={isEditableAddress}
             value={neighborReference}
@@ -112,7 +112,7 @@ export default function AddressCardReadOnlyAndEdit({
           />
         </div>
         <div>
-          <label className="font-semibold">Estado:</label>
+          <label className="font-semibold">State:</label>
           <input
             readOnly={isEditableAddress}
             value={state}
@@ -122,7 +122,7 @@ export default function AddressCardReadOnlyAndEdit({
           />
         </div>
         <div>
-          <label className="font-semibold">Código Postal:</label>
+          <label className="font-semibold">Zip Code:</label>
           <input
             readOnly={isEditableAddress}
             value={zipCode}
@@ -133,7 +133,7 @@ export default function AddressCardReadOnlyAndEdit({
         </div>
       </div>
       <div className="flex justify-end">
-        <Button onClick={handleIsEditable}>Editar</Button>
+        <Button onClick={handleIsEditable}>Edit</Button>
       </div>
     </div>
   );

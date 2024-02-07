@@ -29,7 +29,7 @@ export default function ReviewAndConfirmOrderLayout({
       
       "
       >
-        <h2 className="text-3xl font-semibold mb-5 mt-5 ">Resumen de compra</h2>
+        <h2 className="text-3xl font-semibold mb-5 mt-5 ">Purchase summary</h2>
         {children}
       </section>
       <footer>

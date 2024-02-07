@@ -26,7 +26,7 @@ export default function AddressCardReadOnly({
     >
       <div className="grid grid-cols-2 sm:gap-4 gap-1">
         <div>
-          <p className="font-semibold">Nombre:</p>
+          <p className="font-semibold">Name:</p>
           <p className="break-words">{name}</p>
         </div>
         <div>
@@ -34,32 +34,32 @@ export default function AddressCardReadOnly({
           <p className="break-words">{email}</p>
         </div>
         <div>
-          <p className="font-semibold">Apellido:</p>
+          <p className="font-semibold">Last Name:</p>
           <p className="break-words">{lastName}</p>
         </div>
         <div>
-          <p className="font-semibold">Ciudad:</p>
+          <p className="font-semibold">City:</p>
           <p className="break-words">{city}</p>
         </div>
         <div>
-          <p className="font-semibold">Colonia:</p>
+          <p className="font-semibold">Colony:</p>
           <p className="break-words">{colony}</p>
         </div>
         <div>
-          <p className="font-semibold">Teléfono:</p>
+          <p className="font-semibold">Phone Number:</p>
           <p className="break-words">{phoneNumber}</p>
         </div>
 
         <div>
-          <p className="font-semibold">Referencia Vecinal:</p>
+          <p className="font-semibold">Neighbor Reference:</p>
           <p className="break-words">{neighborReference}</p>
         </div>
         <div>
-          <p className="font-semibold">Estado:</p>
+          <p className="font-semibold">State:</p>
           <p className="break-words">{state}</p>
         </div>
         <div>
-          <p className="font-semibold">Código Postal:</p>
+          <p className="font-semibold">Zip Code:</p>
           <p className="break-words">{zipCode}</p>
         </div>
       </div>

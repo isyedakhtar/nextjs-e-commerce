@@ -30,10 +30,8 @@ export default function BankCardReadOnly({ value }: { value: Value }) {
       </div>
       <div className="flex justify-between">
         <div className="flex flex-col gap-1">
-          <span className={title}>Nombre</span>
-          <span className={subTitle}>
-            {value.name ? value.name : "jose torres shohyue"}
-          </span>
+          <span className={title}>Name</span>
+          <span className={subTitle}>{value.name ? value.name : "AKHTAR"}</span>
         </div>
         <div className="flex w-fit gap-3 ">
           <div className="flex flex-col">
@@ -41,7 +39,7 @@ export default function BankCardReadOnly({ value }: { value: Value }) {
             <span className={subTitle}> {"***"}</span>
           </div>
           <div className="flex flex-col">
-            <span className={title}>Vencimiento</span>
+            <span className={title}>Expiry</span>
             <span className={subTitle}>{"**/**"}</span>
           </div>
         </div>

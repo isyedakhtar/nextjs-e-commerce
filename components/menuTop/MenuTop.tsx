@@ -1,11 +1,12 @@
-import React from 'react'
-import { topNavBarLinks } from './utils/linksGroup'
-import Link from 'next/link'
+import React from "react";
+import { topNavBarLinks } from "./utils/linksGroup";
+import Link from "next/link";
 export default function MenuTop() {
   return (
     <>
-      <nav className='w-full flex items-center justify-center p-1 bg-black'>
-        <ul className='
+      <nav className="w-full flex items-center justify-center p-1 bg-black">
+        <ul
+          className="
         flex
         gap-1
         justify-center
@@ -14,9 +15,11 @@ export default function MenuTop() {
         text-white
         text-sm
         font-light
-        ' >
+        "
+        >
           {topNavBarLinks.map((link) => (
-            <li className="
+            <li
+              className="
             p-1
             pr-3
             relative 
@@ -30,18 +33,14 @@ export default function MenuTop() {
             after:w-[1px]
             after:h-full 
             after:bg-white  
-            " 
-            key={link.titleEs}
+            "
+              key={link.titlesEn}
             >
-              <Link href={link.route}>
-                {link.titleEs}
-              </Link>
+              <Link href={link.route}>{link.titlesEn}</Link>
             </li>
           ))}
         </ul>
       </nav>
-
     </>
-
-  )
+  );
 }

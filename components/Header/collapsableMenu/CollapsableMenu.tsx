@@ -63,7 +63,7 @@ export default function CollapsableMenu({
             ))
           : menuOptionsForNotLoggedUserGroup.map((option) => (
               <Link href={option.route} key={option.id}>
-                <button onClick={() => handleLogOut(option.titleEs)}>
+                <button onClick={() => handleLogOut(option.titleEn)}>
                   <div className=" flex gap-4 p-2 items-center">
                     <div
                       className={`text-xl relative ${

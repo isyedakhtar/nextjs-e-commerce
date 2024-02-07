@@ -7,7 +7,7 @@ export default function AddToCartAndBuyButtons() {
         Comprar
       </button>
       <button className="p-2 bg-science-blue-600 text-base rounded-md text-white">
-        Agregar al carrito
+        Add To Cart
       </button>
     </div>
   );

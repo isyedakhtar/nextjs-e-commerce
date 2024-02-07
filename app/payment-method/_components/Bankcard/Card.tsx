@@ -28,7 +28,7 @@ export default function BankCard({ value }: { value: BankCardDetail }) {
       </div>
       <div className="flex justify-between">
         <div className="flex flex-col gap-1">
-          <span className={title}>Nombre</span>
+          <span className={title}>Number</span>
           <span className={subTitle}>
             {value.name ? value.name : "jose torres shohyue"}
           </span>
@@ -39,7 +39,7 @@ export default function BankCard({ value }: { value: BankCardDetail }) {
             <span className={subTitle}> {value.cvv ? value.cvv : "123"}</span>
           </div>
           <div className="flex flex-col">
-            <span className={title}>Vencimiento</span>
+            <span className={title}>Expiry</span>
             <span className={subTitle}>
               {value.expirationDate ? value.expirationDate : "12/23"}
             </span>

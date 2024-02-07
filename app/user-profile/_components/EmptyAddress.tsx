@@ -12,10 +12,10 @@ export default function EmptyAddress(props: Props) {
   return (
     <section className="w-full max-w-2xl mx-auto bg-white p-6 shadow-md rounded-md">
       <p className="text-2xl text-center font-light text-[#71717a]">
-        Parece que aún no tienes una dirección de envío.{" "}
+        It looks like you don't have a shipping address yet.{" "}
       </p>
       <p className="text-xl text-center font-light text-[#71717a]">
-        Agreguemos una nueva dirección de envío.
+        Add a new shipping address.
       </p>
       <div className="flex justify-center mb-4">
         <span className="text-4xl  text-[#71717a]">
@@ -23,7 +23,7 @@ export default function EmptyAddress(props: Props) {
         </span>
       </div>
       <Button onClick={handleAddressModal} className="m-auto">
-        Agregar Direccíon
+        Add Address
       </Button>
       {isAddAddress && (
         <Modal className="flex justify-center items-center">

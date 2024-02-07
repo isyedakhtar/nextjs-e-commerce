@@ -10,7 +10,7 @@ export default function MobileCategories() {
       <div className="w-full flex gap-2  md:hidden  overflow-hidden overflow-x-auto">
         {catagoriesLinksGroup.map((category) => (
           <Category
-            titleEs={category.titleEs}
+            titleEs={category.titlesEn}
             icon={category.icon}
             route="/"
             id={category.id}

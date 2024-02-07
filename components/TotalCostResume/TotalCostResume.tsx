@@ -9,7 +9,7 @@ export default function TotalCostResume(props: Props) {
   return (
     <div className="p-1 shadow-md rounded-xl  sm:min-w-[300px]">
       <div className="p-5 border-b-2 border-b-textGray flex justify-center">
-        <p className="text-base font-medium">Resumen de compra</p>
+        <p className="text-base font-medium">Purchase summary</p>
       </div>
       <div className="flex justify-between p-1">
         <div className="flex- flex-col">

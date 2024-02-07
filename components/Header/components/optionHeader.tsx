@@ -38,7 +38,7 @@ export default function OptionHeader(props: Props) {
             )}
           </div>
           <div>
-            <p className="text-sm font-semibold">{titleEs}</p>
+            <p className="text-sm font-semibold">{titleEn}</p>
           </div>
         </div>
       </button>

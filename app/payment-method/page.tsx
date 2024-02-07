@@ -54,7 +54,7 @@ export default function PaymentMethodPage() {
       <BankCard value={cartInformation} />
       <CardForm setValue={setCartInformation} value={cartInformation} />
       <ButtonRouter onClick={handleBtn} disabled={!isButtonDisable}>
-        Continuar a la confirmación del pedido.
+        Continue to order confirmation
       </ButtonRouter>
     </>
   );

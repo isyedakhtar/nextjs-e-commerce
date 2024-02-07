@@ -106,9 +106,9 @@ export default function DeliveryAddressPage() {
             <h2 className="text-4xl font-medium text-center mb-7">
               {isLogged
                 ? thereIsAddressData
-                  ? "Seleccione la dirección de envío"
-                  : "Formulario de envío"
-                : " Inicie sesión para continuar."}
+                  ? "Select shipping address"
+                  : "Submit form"
+                : " Sign in to continue."}
             </h2>
             {isLogged
               ? addressUserData &&
@@ -163,10 +163,10 @@ export default function DeliveryAddressPage() {
               <div className="flex w-full justify-end mt-4">
                 <button
                   className="scale-125 flex items-center gap-1 "
-                  title="Agregar otra dirección"
+                  title="Add another address"
                   onClick={() => handleOpenAddAddressModal("addone")}
                 >
-                  Agregar otra dirección
+                  Add another address
                   <span className="text-4xl text-science-blue-600">
                     <MdAddCircle />
                   </span>
@@ -179,7 +179,7 @@ export default function DeliveryAddressPage() {
             disabled={!addressIdSelected}
             className="h-fit min-[200px]"
           >
-            Continuar
+            Continue
           </Button>
         </>
       ) : (

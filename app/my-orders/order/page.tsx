@@ -64,7 +64,7 @@ export default function OrderPage() {
               {deliveryAddress && (
                 <>
                   <h2 className="text-center text-2xl font-bold">
-                    Dirección de envío
+                    Shipping Address
                   </h2>
                   <AddressCardReadOnly address={deliveryAddress} />
                 </>

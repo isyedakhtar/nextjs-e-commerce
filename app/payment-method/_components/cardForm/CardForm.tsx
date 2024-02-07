@@ -55,7 +55,7 @@ export default function CardForm({ setValue, value }: Props) {
           className="text-lg font-medium first-letter:uppercase"
           htmlFor="clientName"
         >
-          nombre completo
+          Full Name
         </label>
         <input
           value={value.name}
@@ -75,7 +75,7 @@ export default function CardForm({ setValue, value }: Props) {
           className="text-lg font-medium first-letter:uppercase"
           htmlFor="cardNumberForm"
         >
-          numero de tarjeta
+          Card Number
         </label>
         <input
           value={value.cardNumber}
@@ -94,7 +94,7 @@ export default function CardForm({ setValue, value }: Props) {
           htmlFor="expirationForm"
           className="text-lg font-medium first-letter:uppercase"
         >
-          Vencimiento
+          Expiry
         </label>
         <input
           value={value.expirationDate}

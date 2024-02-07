@@ -94,7 +94,7 @@ export default function UserProfilePage() {
       {(addresses && addresses.length >= 1) || userInfo ? (
         <>
           <section className="w-full max-w-2xl mx-auto bg-white p-6 shadow-md rounded-md">
-            <h2 className="text-2xl font-bold mb-4">Datos Personales</h2>
+            <h2 className="text-2xl font-bold mb-4">Personal Details</h2>
             <Divider className="mb-5" />
             <div className="flex  flex-col gap-4 ">
               <div className="flex justify-between px-3 items-center">

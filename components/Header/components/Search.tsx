@@ -81,7 +81,7 @@ export default function Search() {
       <input
         onChange={handleInputSearch}
         value={search}
-        placeholder="¿Que buscas?"
+        placeholder="Search here"
         className="p-2 w-1/2 lg:w-[300px] xl:w-[500px] rounded-l-xl outline-[#22d3ee] outline-1 text-black"
       />
       <button className="bg-white rounded-r-xl p-2 border-l border-l-[#e2e8f0]">

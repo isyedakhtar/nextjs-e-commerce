@@ -113,7 +113,7 @@ export default function ReviewAndConfirmOderPage() {
             {userAddress && (
               <>
                 <h2 className="text-2xl text-center font-medium">
-                  Dirección de envío
+                  Shipping Address
                 </h2>
                 <AddressCardReadOnly address={userAddress} />
               </>
@@ -126,7 +126,7 @@ export default function ReviewAndConfirmOderPage() {
               totalPrice={totalPrice}
             />
             <h2 className="sm:text-2xl  text-xl text-center mt-9">
-              Método de pago seleccionado.
+              Selected Payment Method
             </h2>
             <BankCard value={paymentMethodDetails} />
 
@@ -134,7 +134,7 @@ export default function ReviewAndConfirmOderPage() {
               onClick={() => setIsOpenModal(true)}
               className="mt-10 w-full"
             >
-              Realizar compra.
+              Finalize Purchase
             </ButtonRouter>
           </div>
           {isOpenModal && userAddress && myOrderProducts && cartInfo && (

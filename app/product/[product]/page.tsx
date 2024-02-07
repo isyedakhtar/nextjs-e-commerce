@@ -132,7 +132,7 @@ export default function ProductPage({
         );
       }
     }
-
+    console.log("Product Page", product);
     dispatch(
       addItemsToProductByAmount({
         key: "shoppingCart",
@@ -178,13 +178,13 @@ export default function ProductPage({
                 setQuantity={setQuantity}
               />
               <Button onClick={handleBuy} className=" min-w-[400px] m-auto">
-                Comprar
+                Buy Now
               </Button>
               <Button
                 onClick={handleAddToCart}
                 className=" min-w-[400px] m-auto"
               >
-                Agregar al carrito
+                Add To Cart
               </Button>
               {/* <AddToCartAndBuyButtons /> */}
             </div>
