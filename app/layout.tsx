@@ -2,6 +2,7 @@ import { Providers } from "@/redux/provider";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import CDPPageView from "@/components/CDP/CDPPageView";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,6 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <CDPPageView />
       <body className={inter.className}>
         <div>
           <Providers>{children}</Providers>

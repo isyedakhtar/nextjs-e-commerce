@@ -1,4 +1,5 @@
 "use client";
+import { engage } from "@/components/CDP/engage";
 import { Button } from "@/components/components/Button";
 import LoadingSpinner from "@/components/components/LoadingSpinner";
 import { activeWarning } from "@/redux/slices/globalWarning/globalWarning";
@@ -111,7 +112,26 @@ export default function RegisterPage() {
     )
       //@ts-ignore
       dispatch(UserRegister(registerUser));
+    console.log("identity", identityEvent(registerUser));
   };
+
+  function identityEvent(registerUser: RegisterUser) {
+    return {
+      type: "IDENTITY",
+      channel: "WEB",
+      page: "checkout",
+      firstName: registerUser.firstName,
+      lastName: registerUser.lastName,
+      email: registerUser.email,
+      identifiers: [
+        {
+          provider: "email",
+          id: registerUser.email,
+        },
+      ],
+    };
+  }
+
   return (
     <form
       className="p-4 shadow-lg flex flex-col  lg:gap-2 gap-1 relative"
@@ -120,7 +140,7 @@ export default function RegisterPage() {
       <h2 className="text-3xl font-bold text-center">Registrate</h2>
       <h2 className="text-center ">Es rápido y fácil.</h2>
       <div className="flex items-center p-4 gap-7  flex-wrap">
-        <label htmlFor="firstName">Nombre</label>
+        <label htmlFor="firstName">First Name</label>
         <input
           className="lg:w-[380px] w-[200px] border border-borderGray p-2 rounded-md"
           id="firstName"
@@ -132,7 +152,7 @@ export default function RegisterPage() {
         />
       </div>
       <div className="flex items-center p-4 gap-7 flex-wrap">
-        <label htmlFor="lastName">Apellido</label>
+        <label htmlFor="lastName">Last Name</label>
         <input
           className="lg:w-[380px] w-[200px] border border-borderGray p-2 rounded-md"
           id="lastName"
@@ -144,7 +164,7 @@ export default function RegisterPage() {
         />
       </div>
       <div className="flex items-center p-4 gap-7 flex-wrap">
-        <label htmlFor="email">Correo</label>
+        <label htmlFor="email">Email</label>
         <input
           className="lg:w-[380px] w-[200px] border border-borderGray p-2 rounded-md"
           id="email"
@@ -157,7 +177,7 @@ export default function RegisterPage() {
       </div>
       <div className="flex flex-col items-center p-4 gap-7 flex-wrap">
         <div className="flex gap-4 items-center relative">
-          <label htmlFor="password">Contraseña</label>
+          <label htmlFor="password">Password</label>
           <input
             className="lg:w-[380px] w-[200px] border border-borderGray p-2 rounded-md"
             id="password"
@@ -222,12 +242,12 @@ export default function RegisterPage() {
         </div>
       </div>
       <Button disabled={!isAvailableToSubmit} className="m-auto tracking-wider">
-        Registrarse
+        Register
       </Button>
       <span>
         {"Ya tienes cuenta?  "}
         <Link href={"/auth/signin"} className="text-science-blue-500 underline">
-          Iniciar sesión
+          Login
         </Link>
       </span>
       {isLoading && (

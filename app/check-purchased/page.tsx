@@ -1,4 +1,5 @@
 "use client";
+import { engage } from "@/components/CDP/engage";
 import { BankCardDetail } from "../payment-method/_interfaces";
 import AddressCardReadOnly from "@/components/Address/AddressCard/AddressCardReadOnly";
 import BankCardReadOnly from "@/components/BankCardReadOnly/BankCardReadOnly";
@@ -56,7 +57,7 @@ export default function CheckPurchaseProducts() {
       {groupOfProducts && groupOfProducts.length >= 1 ? (
         <section className="flex justify-center flex-col items-center">
           <h2 className="text-center  text-4xl text-science-blue-700 font-semibold">
-            ¡Gracias por su compra!
+            Thanks For Your Purchase
           </h2>
           <Divider className="mt-5" />
           <div className="flex flex-wrap gap-4 justify-center">
@@ -65,7 +66,7 @@ export default function CheckPurchaseProducts() {
               {deliveryAddress && (
                 <>
                   <h2 className="text-center text-2xl font-bold">
-                    Dirección de envío
+                    Shipping Address
                   </h2>
                   <AddressCardReadOnly address={deliveryAddress} />
                 </>
@@ -79,12 +80,10 @@ export default function CheckPurchaseProducts() {
                   totalPrice={totalCost}
                 />
               )}
-              <h2 className="text-2xl text-center mt-9">
-                Método de pago seleccionado.
-              </h2>
+              <h2 className="text-2xl text-center mt-9">Payment Method</h2>
               <BankCardReadOnly value={paymentMethodDetails} />
               <LinkButton className="mt-3" href={"/"}>
-                Regresar al inicio
+                Back to top
               </LinkButton>
             </div>
           </div>

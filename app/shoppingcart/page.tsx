@@ -1,4 +1,5 @@
 "use client";
+import { engage } from "@/components/CDP/engage";
 import { Button } from "@/components/components/Button";
 import { LinkButton } from "@/components/components/LinkButton";
 import LoadingSpinner from "@/components/components/LoadingSpinner";
@@ -39,6 +40,22 @@ export default function ShoppingCart() {
   }, [productsInShoppingCart]);
 
   const handleBtn = () => {
+    console.log(groupOfProducts);
+
+    var products = groupOfProducts.map((line) => {
+      return { item_id: "item_id" + line.id };
+    });
+
+    var event = {
+      channel: "WEB",
+      currency: "AUD",
+      language: "EN",
+      type: "CONFIRM",
+      page: "cart",
+      product: products,
+    };
+
+    engage.event("CONFIRM", event);
     router.push(`/delivery-address?product=sc`);
   };
 
@@ -71,7 +88,7 @@ export default function ShoppingCart() {
               shippingCost={shippingCost}
             />
             <Button onClick={handleBtn} disabled={!!!productsInShoppingCart}>
-              Comprar ahora
+              Continue
             </Button>
           </aside>
         </>

@@ -1,3 +1,4 @@
+import { engage } from "@/components/CDP/engage";
 import { AddressDb } from "@/services/address";
 import { createMyOrder } from "@/services/myOrders/createOrder";
 import { getTodayDateInFormatMMDDYYYY } from "@/utils/date";
@@ -59,6 +60,14 @@ export default function PurchaseSuccessful(props: Props) {
           dispatch(updateShoppingCartCounter({ count: res }))
         );
         if (typeof res === "string") {
+          var event = {
+            channel: "WEB",
+            currency: "AUD",
+            page: "checkout",
+            reference_id: res,
+            status: "CONFIRMED",
+          };
+          engage.event("CHECKOUT", event);
           return router.replace(`/check-purchased?purchasedId=${res}`);
         }
         setIsError(true);
@@ -110,7 +119,7 @@ export default function PurchaseSuccessful(props: Props) {
                 textAnimation ? "opacity-1 scale-100" : " opacity-0 scale-75"
               }`}
             >
-              Compra exitosa !!!
+              Successful Purchase !!!
             </p>
             <span className="text-4xl text-[#22c55e] absolute -right-9 ">
               <FaTruckMoving />

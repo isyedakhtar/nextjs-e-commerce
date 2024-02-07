@@ -1,3 +1,4 @@
+import { engage } from "@/components/CDP/engage";
 import { Signin } from "@/app/auth/signin/_interfaces/signin";
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { signin } from "../../slices/auth/sliceForAuth";
@@ -32,7 +33,20 @@ export const UserSignin = createAsyncThunk(
           token: null,
         })
       );
-
+      var event = {
+        type: "IDENTITY",
+        channel: "WEB",
+        page: "Signin",
+        currency: "AUD",
+        email: userDetails.email,
+        identifiers: [
+          {
+            provider: "email",
+            id: userDetails.email,
+          },
+        ],
+      };
+      engage.event("IDENTITY", event);
       return createUser.data;
     } catch (error) {
       dispatch(

@@ -1,4 +1,5 @@
 "use client";
+import { engage } from "@/components/CDP/engage";
 import { Product } from "@/interfaces/product";
 import { addProductToShoppingCart } from "@/redux/slices/ShoppingCart";
 import Image from "next/image";
@@ -60,6 +61,24 @@ export default function ProductCard(props: Product) {
         })
       );
     }
+    //CDP Event - Needs refactoring
+    engage.event("ADD", {
+      channel: "WEB",
+      currency: "AUD",
+      language: "EN",
+      page: "Products",
+      product: {
+        name: props.title,
+        type: props.category,
+        item_id: "item_id" + props.id,
+        productid: props.id,
+        referenceId: "item_id" + props.id,
+        orderedAt: new Date().toISOString(),
+        quantity: 1,
+        price: props.price,
+        currency: "AUD",
+      },
+    });
   };
 
   let discountPrice = priceWithDiscount?.toLocaleString("es-MX", {
@@ -148,7 +167,7 @@ export default function ProductCard(props: Product) {
         onClick={() => {
           handleAddCartBtn("shoppingCart", id);
         }}
-        title="agregar al carrito"
+        title="Add to cart"
         className={`
         self-start
         font-medium 
@@ -168,7 +187,7 @@ export default function ProductCard(props: Product) {
         <div className="text-white">
           <VscAdd />
         </div>
-        <span>Agregar al carrito </span>
+        <span>Add To Cart </span>
       </button>
     </div>
   );
