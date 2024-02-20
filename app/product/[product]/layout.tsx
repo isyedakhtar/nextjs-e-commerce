@@ -20,6 +20,7 @@ export async function generateMetadata({
   return {
     title: product.title,
     category: product.category,
+    description: product.description,
     openGraph: {
       description: product.description,
       type: "article",
