@@ -26,7 +26,7 @@ export async function generateMetadata({
       description: product.description,
       type: "article",
       title: product.title,
-      url: fullUrl,
+      url: "/product/${product.id}",
       tags: ["product"],
     },
   };

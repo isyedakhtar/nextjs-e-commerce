@@ -15,7 +15,8 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   //@ts-ignore
   const categoryName = categoryNameSelected[params.category.toLowerCase()];
-  const fullUrl = headers().get("referer") || "";
+  const fullUrl =
+    headers().get("referer") || "https://nextjs-e-commerce-sepia.vercel.app/";
 
   return {
     title: categoryName,
@@ -26,7 +27,7 @@ export async function generateMetadata({
       description: categoryName,
       type: "article",
       title: categoryName,
-      url: fullUrl,
+      url: "/category/${categoryName}",
       tags: ["category"],
     },
   };
