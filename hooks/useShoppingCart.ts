@@ -62,9 +62,9 @@ export function useShoppingCart() {
               activeWarning({
                 isActiveWarning: true,
                 severity: "error",
-                warningMessage: `Sesión expirada.`,
+                warningMessage: `Session Expired.`,
                 duration: 4000,
-                warningSubMessage: "Por favor, inicie sesión.",
+                warningSubMessage: "Please Login Again",
               })
             );
           }

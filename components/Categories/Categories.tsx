@@ -30,7 +30,7 @@ export default function Categories(props: Props) {
         <span className="text-white font-extrabold text-2xl">
           <AiOutlineMenu />
         </span>
-        <p className="uppercase">{title ? title : "CATEGORIÁS"}</p>
+        <p className="uppercase">{title ? title : "Categories"}</p>
         <CollapsableCategoryBar />
       </div>
     </div>

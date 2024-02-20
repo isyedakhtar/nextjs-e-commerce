@@ -28,6 +28,7 @@ import { getEntityInLocalStorage } from "@/utils/localStorage/localStorageGeneri
 import { addProductToShippingCartByAmount } from "@/services/shoppingCartdb/addProductToShoppingCartByAmount";
 
 import Loading from "./loading";
+
 export default function ProductPage({
   params,
 }: {
@@ -132,7 +133,6 @@ export default function ProductPage({
         );
       }
     }
-    console.log("Product Page", product);
     dispatch(
       addItemsToProductByAmount({
         key: "shoppingCart",
