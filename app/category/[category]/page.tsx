@@ -27,7 +27,7 @@ export async function generateMetadata({
       description: categoryName,
       type: "article",
       title: categoryName,
-      url: "/category/${categoryName}",
+      url: `/category/${categoryName}`,
       tags: ["category"],
     },
   };
