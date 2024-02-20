@@ -21,6 +21,7 @@ export async function generateMetadata({
     title: categoryName,
     category: categoryName,
     description: categoryName,
+    metadataBase: new URL("https://nextjs-e-commerce-sepia.vercel.app/"),
     openGraph: {
       description: categoryName,
       type: "article",
